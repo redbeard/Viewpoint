@@ -29,7 +29,7 @@ module Viewpoint::EWS
       def to_ews_create
         structure = {}
         structure[:message_disposition] = (draft ? 'SaveOnly' : 'SendAndSaveCopy')
-        structure[:send_meeting_invitations] = 'SendToNone'
+        structure[:send_meeting_invitations] = self[:send_meeting_invitations] ? self[:send_meeting_invitations] : 'SendToNone'
 
         if self.saved_item_folder_id
           if self.saved_item_folder_id.kind_of?(Hash)

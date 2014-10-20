@@ -28,6 +28,7 @@ require 'viewpoint/string_utils'
 
 # Load the logging setup
 require 'viewpoint/logging'
+# require 'viewpoint/logging/config' # Turn on logging
 
 # Load the Exception classes
 require 'ews/exceptions/exceptions'
